@@ -1,8 +1,7 @@
 #!/bin/sh
 # 该脚本使用方法
-# 源码地址：https://github.com/smithgoo
-# step 1. 在工程根目录新建AutoPacking文件夹，在该文件夹中新建文件autopacking.sh，将该脚本复制到autopacking.sh文件并保存(或者直接复制该文件);
-# step 2. 设置该脚本;
+# 源码地址：https://github.com/smithgoo/autopacking
+# step 1. 把AutoPacking文件夹和项目工程放在一个层级。
 # step 2. cd 该脚本目录，运行chmod +x autopacking.sh;
 # step 3. 终端运行 sh autopacking.sh;
 # step 4. 选择不同选项....
@@ -369,7 +368,7 @@ open ${__EXPORT_IPA_PATH}
 IPA_PATH="${__EXPORT_IPA_PATH}/${__IPA_NAME}.ipa"
 APPID="1"
 ACCESSKEY="huangxiuyong"
-RESULT=$(curl -F "file=@${IPA_PATH}" -F "appId=${APPID}" -F "accessKey=${ACCESSKEY}" https://app.51xianzu.com/upload)
+RESULT=$(curl -F "file=@${IPA_PATH}" -F "appId=${APPID}" -F "accessKey=${ACCESSKEY}" https://app.51.com/upload)
 echo $RESULT
 fi
 
